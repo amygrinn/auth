@@ -7,7 +7,7 @@ function App() {
   const store = useAuthStore();
   return (
     <AuthContext.Provider value={store}>
-      <Auth google twitter github />
+      <Auth google github />
     </AuthContext.Provider>
   );
 }

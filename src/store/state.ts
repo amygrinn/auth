@@ -1,7 +1,7 @@
 interface User {
   email: string;
   id: string;
-  provider: 'local' | 'google' | 'twitter' | 'github';
+  provider: 'local' | 'google' | 'github';
   [key: string]: any;
 }
 

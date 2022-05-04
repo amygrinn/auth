@@ -67,7 +67,6 @@ const main = merge(common, {
     }),
     new CopyPlugin({
       patterns: [
-        { from: path.resolve(__dirname, 'template.html'), to: 'browser.html' },
         'lib/*.min.*',
 
         // Add index, which just redirects to node by default

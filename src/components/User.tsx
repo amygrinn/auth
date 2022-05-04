@@ -25,8 +25,6 @@ export default function User(props: PropsWithChildren<{}>) {
               switch (user ? user.provider : '') {
                 case 'google':
                   return ' with Google';
-                case 'twitter':
-                  return ' with Twitter';
                 case 'github':
                   return ' with Github';
                 case 'local':

@@ -8,16 +8,15 @@ import { actions, AuthContext } from './store';
 export interface AuthProps {
   Header?: FC;
   Account?: FC;
-  google: boolean;
-  twitter: boolean;
-  github: boolean;
+  google?: boolean;
+  github?: boolean;
 }
 
 export default function Auth(props: AuthProps) {
   const [state, , dispatch] = useContext(AuthContext);
 
   const { loading, user, error } = state;
-  const { Header, Account, google, twitter, github } = props;
+  const { Header, Account, google, github } = props;
 
   useEffect(() => dispatch(actions.init), []);
 
@@ -43,7 +42,7 @@ export default function Auth(props: AuthProps) {
         <Spinners.Large />
       </div>
       <div data-page="login">
-        <Login google={google} twitter={twitter} github={github}>
+        <Login google={google} github={github}>
           {Header && <Header />}
         </Login>
       </div>

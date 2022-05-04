@@ -53,7 +53,6 @@ export default function MyComponent() {
         <Auth
           // Choose which providers to include
           google
-          twitter
           github
           // Add a custom header to the login screen
           Header={HeaderComponent}
@@ -98,7 +97,7 @@ When included via script tag, the component, context, and store hook are exposed
         const store = TygrAuth.useAuthStore();
         return (
           <TygrAuth.Context.Provider value={store}>
-            <TygrAuth.Component google twitter github />
+            <TygrAuth.Component google github />
           </TygrAuth.Context.Provider>
         );
       }
@@ -142,7 +141,6 @@ export default {
   mounted() {
     Auth.mount(this.$refs['tygr-auth'], {
       google: true,
-      twitter: true,
       github: true,
     });
   },
@@ -163,7 +161,6 @@ export class AuthComponent  {
   ngAfterViewInit() {
     Auth.mount(this.el.nativeElement, {
       google: true,
-      twitter: true,
       github: true
     });
   }
@@ -184,9 +181,3 @@ $accent-2: yellow;
 
 @import '@tygr/auth/sass';
 ```
-
-# Compliance
-
-Once someone on your service authenticates via Sign in with Twitter you must clearly display their Twitter identity. Twitter identity includes the person’s current Twitter @handle, avatar, and Twitter logo. Any display of someone’s Twitter followers on your service must clearly show that the relationship is associated with Twitter.
-
-[Display requirements](https://developer.twitter.com/en/developer-terms/display-requirements)

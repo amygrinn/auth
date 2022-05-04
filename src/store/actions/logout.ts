@@ -9,7 +9,7 @@ const logout: Action = async ({ commit }) => {
   try {
     await http.put('/logout');
     commit({ type: 'logout' });
-  } catch (err) {
+  } catch (err: any) {
     commit({ type: 'error', payload: err.message });
   }
 };
