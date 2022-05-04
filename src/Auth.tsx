@@ -10,13 +10,14 @@ export interface AuthProps {
   Account?: FC;
   google?: boolean;
   github?: boolean;
+  facebook?: boolean;
 }
 
 export default function Auth(props: AuthProps) {
   const [state, , dispatch] = useContext(AuthContext);
 
   const { loading, user, error } = state;
-  const { Header, Account, google, github } = props;
+  const { Header, Account, google, github, facebook } = props;
 
   useEffect(() => dispatch(actions.init), []);
 
@@ -42,7 +43,7 @@ export default function Auth(props: AuthProps) {
         <Spinners.Large />
       </div>
       <div data-page="login">
-        <Login google={google} github={github}>
+        <Login google={google} github={github} facebook={facebook}>
           {Header && <Header />}
         </Login>
       </div>

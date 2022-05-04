@@ -9,6 +9,7 @@ import LocalForm from './LocalForm';
 interface LoginProps {
   google?: boolean;
   github?: boolean;
+  facebook?: boolean;
 }
 
 const getProviderLink = (provider: string) => {
@@ -19,7 +20,7 @@ const getProviderLink = (provider: string) => {
 };
 
 export default function Login(props: PropsWithChildren<LoginProps>) {
-  const { children, google, github } = props;
+  const { children, google, github, facebook } = props;
   const hasChildren = !!children;
 
   const [authContainer, setAuth, LOGIN, REGISTER, RESET] = useSwitch(
@@ -92,6 +93,7 @@ export default function Login(props: PropsWithChildren<LoginProps>) {
           Use Provider:
           {google && <icons.Google />}
           {github && <icons.Github />}
+          {facebook && <icons.Facebook />}
         </button>
       </nav>
 
@@ -114,6 +116,15 @@ export default function Login(props: PropsWithChildren<LoginProps>) {
             href={getProviderLink('github')}
           >
             <icons.Github /> Sign in with Github
+          </a>
+        )}
+        {facebook && (
+          <a
+            className="provider"
+            data-prov="external"
+            href={getProviderLink('facebook')}
+          >
+            <icons.Facebook /> Sign in with Facebook
           </a>
         )}
       </div>
