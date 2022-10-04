@@ -1,6 +1,6 @@
 {
   "name": "@taylorgrinn/auth",
-  "version": "3.1.2",
+  "version": "4.0.0",
   "description": "Auth for Taylor",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
