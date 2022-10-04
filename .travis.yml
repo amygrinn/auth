@@ -10,15 +10,17 @@ deploy:
   - provider: pages
     on:
       branch: main
-      repo: taylorgrinn/tygr-auth
-    edge: true
+      repo: taylorgrinn/auth
     github_token: $GITHUB_TOKEN
     local_dir: dist
+    skip_cleanup: true
   - provider: npm
     on:
       branch: main
       tags: true
-      repo: taylorgrinn/tygr-auth
+      repo: taylorgrinn/auth
     edge: true
-    email: grinntaylor+old@gmail.com
-    api_token: $NPM_TOKEN
+    email: grinntaylor@gmail.com
+    skip_cleanup: true
+    api_token:
+      secure: 'Czc8nY4WVL4NRKaY6opHT3pxSZgnyZ+JFB2pMCG5Vdvv5GkYuMGqzBfwONQBoyw/7NqCjCOHLPoS9wk/t/+TnuVrJZQgQL/UmEtUGcIYlChEMTQ4MudQdEJfcJGMN9J+94569o7jTgDsnnfh5rmcAmO0c7Vk6f8sfkLcaB2UpHH8tfT32rfc4K47cWG7reKHVZe8Knf+d7YW+0/Oo72He7A2Kd6Jb1u0EEcFTIpwYCqbVzWEHYnmRpprRnZzgoyEm++WZaH15EuOuIurZMmkDWyzf6RbZJmsRhia/WkfMUEr7KpoBgY5MJOTDJMWIo89TZM1yCB11WG5ZtxdAwiGEPtyoHKQgtQDIN9CXeJfjU468bFJnyL4dupW/T2HxRYRxRkan80KRJMFOXur5B/om9blLizD3Wo7MTb0CRsGI58pdnT092y50qyeb3yI00Sn8qPYHERbmh1d/8S2MQsFKLvLhX9ec9qFe3tYxJfXb/6QceeDr3l4oF+a0ehongor3xjw1qNTB4ZhIiks0CxQhMd7xLpioUnxwJv5J4GKZrOUfrY/xfYRmEnxZ3NU1zqeswa1OK2iqiumYhO9R5GHLJyZhJ3RssvDk/meG6/+gqNnlVw/0mJF5ghnilkC2XN+wUkr6RyiwRvYa2EgtNNjByFjodZpVuhfOlPA1djGlx0='

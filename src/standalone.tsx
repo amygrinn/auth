@@ -1,22 +1,23 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import AuthComponent, { AuthProps } from './Auth';
-import TygrBoundary from './components/ErrorBoundary';
+import TayBoundary from './components/ErrorBoundary';
 import useAuthStore, { AuthContext } from './store';
 
 function Auth(props: AuthProps) {
   const store = useAuthStore();
   return (
-    <TygrBoundary>
+    <TayBoundary>
       <AuthContext.Provider value={store}>
         <AuthComponent {...props} />
       </AuthContext.Provider>
-    </TygrBoundary>
+    </TayBoundary>
   );
 }
 
 export default {
-  mount: (el: Element | DocumentFragment | null, props: AuthProps) => {
-    ReactDOM.render(React.createElement(Auth, props), el);
+  mount: (el: Element | DocumentFragment, props: AuthProps) => {
+    const root = createRoot(el);
+    root.render(React.createElement(Auth, props));
   },
 };

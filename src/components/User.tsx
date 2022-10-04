@@ -13,7 +13,7 @@ export default function User(props: PropsWithChildren<{}>) {
   };
 
   return (
-    <div className="tygr-user">
+    <div className="tay-user">
       {hasChildren ? (
         <ErrorBoundary>{children}</ErrorBoundary>
       ) : (

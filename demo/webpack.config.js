@@ -10,7 +10,7 @@ const webpack = require('webpack');
 
 const PROD = process.env.NODE_ENV === 'production';
 
-const COMMON_NAME = 'TyGr Auth';
+const COMMON_NAME = 'Tay Auth';
 
 const common = {
   output: {

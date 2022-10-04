@@ -1,4 +1,4 @@
-import useSwitch from '@tygr/switch';
+import useSwitch from '@taylorgrinn/switch';
 import React, { FormEvent, useContext, useEffect } from 'react';
 import useInput from '../../hooks/use-input';
 import { actions, AuthContext } from '../../store';
@@ -42,7 +42,7 @@ export default function LocalForm(props: LocalFormProps) {
   };
 
   return (
-    <form {...resetContainer} onSubmit={onSubmit} className="tygr-local">
+    <form {...resetContainer} onSubmit={onSubmit} className="tay-local">
       <label data-prov="local" htmlFor="email" data-reset="!success">
         Email Address
       </label>

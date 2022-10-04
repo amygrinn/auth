@@ -1,4 +1,4 @@
-import useSwitch from '@tygr/switch';
+import useSwitch from '@taylorgrinn/switch';
 import React, { FC, useContext, useEffect } from 'react';
 import Login from './components/Login';
 import * as Spinners from './components/Spinners';
@@ -35,7 +35,7 @@ export default function Auth(props: AuthProps) {
   useEffect(setPage(currentPage), [loading, user]);
 
   return (
-    <div {...pageContainer} className="tygr-auth">
+    <div {...pageContainer} className="tay-auth">
       <div data-page="user">
         <User>{Account && <Account />}</User>
       </div>

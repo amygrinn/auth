@@ -1,7 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import Auth, { AuthContext, useAuthStore } from '../lib';
-import '../lib/tygr-auth.min.css';
+import '../lib/tay-auth.min.css';
 
 function App() {
   const store = useAuthStore();
@@ -12,4 +12,5 @@ function App() {
   );
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+const root = createRoot(document.getElementById('app'));
+root.render(<App />);

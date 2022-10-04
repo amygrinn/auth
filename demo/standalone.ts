@@ -1,5 +1,5 @@
 import Auth from '../lib/standalone';
-import '../lib/tygr-auth.min.css';
+import '../lib/tay-auth.min.css';
 
 Auth.mount(document.getElementById('app'), {
   google: true,

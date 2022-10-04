@@ -1,7 +1,7 @@
 {
-  "name": "@tygr/auth",
-  "version": "3.1.1",
-  "description": "Auth for tygr",
+  "name": "@taylorgrinn/auth",
+  "version": "3.1.2",
+  "description": "Auth for Taylor",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
@@ -55,7 +55,7 @@
     "clean": "rimraf lib dist",
     "ts": "tsc",
     "ts:w": "npm run ts -- -w",
-    "sass": "sass -I node_modules --style=compressed --no-source-map sass/index.scss lib/tygr-auth.min.css",
+    "sass": "sass -I node_modules --style=compressed --no-source-map sass/index.scss lib/tay-auth.min.css",
     "sass:w": "npm run sass -- --watch",
     "webpack": "webpack",
     "webpack:w": "npm run webpack -- -w",
@@ -79,14 +79,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tylergrinn/tygr-auth.git"
+    "url": "https://github.com/taylorgrinn/auth.git"
   },
   "keywords": [
     "react",
     "login",
     "webpack"
   ],
-  "author": "Tyler Grinn",
+  "author": "Taylor Grinn",
   "license": "ISC",
   "peerDependencies": {
     "react": "^18.1.0"
@@ -131,7 +131,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
-    "@tygr/logo": "^3.0.2",
-    "@tygr/switch": "^1.2.2"
+    "@taylorgrinn/logo": "^4.0.3",
+    "@taylorgrinn/switch": "^2.0.2"
   }
 }

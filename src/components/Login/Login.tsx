@@ -1,5 +1,5 @@
-import Logo from '@tygr/logo';
-import useSwitch from '@tygr/switch';
+import Logo from '@taylorgrinn/logo';
+import useSwitch from '@taylorgrinn/switch';
 import React, { PropsWithChildren } from 'react';
 import API_BASE_URL from '../../api-base-url';
 import ErrorBoundary from '../ErrorBoundary';
@@ -13,6 +13,7 @@ interface LoginProps {
 }
 
 const getProviderLink = (provider: string) => {
+  if (!API_BASE_URL) return '';
   const url = new URL(`${API_BASE_URL}/${provider}`);
   const params = new URLSearchParams({ redirect: location.href });
   url.search = params.toString();
@@ -37,13 +38,13 @@ export default function Login(props: PropsWithChildren<LoginProps>) {
   );
 
   return (
-    <div className="tygr-login" {...authContainer} {...provContainer}>
+    <div className="tay-login" {...authContainer} {...provContainer}>
       {hasChildren ? (
         <ErrorBoundary>{children}</ErrorBoundary>
       ) : (
         <div className="header">
           <Logo height="32px" />
-          <h3>TyGr Login</h3>
+          <h3>Tay Login</h3>
         </div>
       )}
 

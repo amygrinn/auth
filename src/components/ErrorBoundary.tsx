@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class TygrBoundary extends React.Component<
+export default class TayBoundary extends React.Component<
   React.PropsWithChildren<{}>,
   { hasError: boolean }
 > {

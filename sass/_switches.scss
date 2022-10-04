@@ -1,4 +1,4 @@
-@use '@tygr/switch';
+@use '@taylorgrinn/switch';
 
 @import 'variables';
 
@@ -13,7 +13,7 @@
   }
 }
 
-.tygr-auth {
+.tay-auth {
   position: relative;
 
   [data-page] {
@@ -37,7 +37,7 @@
   }
 }
 
-.tygr-login {
+.tay-login {
   @include switch.switch('auth', login, register, reset) {
     @include hide();
 
@@ -58,7 +58,7 @@
   }
 }
 
-.tygr-local {
+.tay-local {
   @include switch.switchChild('auth', reset) {
     @include switch.switch('reset', initial, verify, password, success) {
       @include hide();
