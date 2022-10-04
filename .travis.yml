@@ -10,7 +10,7 @@ deploy:
   - provider: pages
     on:
       branch: main
-      repo: tylergrinn/tygr-auth
+      repo: taylorgrinn/tygr-auth
     edge: true
     github_token: $GITHUB_TOKEN
     local_dir: dist
@@ -18,7 +18,7 @@ deploy:
     on:
       branch: main
       tags: true
-      repo: tylergrinn/tygr-auth
+      repo: taylorgrinn/tygr-auth
     edge: true
-    email: tylergrinn@gmail.com
+    email: grinntaylor+old@gmail.com
     api_token: $NPM_TOKEN

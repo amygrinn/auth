@@ -1,3 +1,5 @@
+# This package has moved to [@taylorgrinn/auth](https://github.com/taylorgrinn/auth)
+
 # Tygr Auth
 
 _Part of the [@tygr component library](https://tygr.info/@tygr)_
